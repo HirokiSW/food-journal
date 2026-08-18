@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/itemImageViewPicture"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/itemTextViewName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Item Name"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/itemImageViewPicture"
+        app:layout_constraintTop_toTopOf="@+id/itemImageViewPicture" />
+
+    <TextView
+        android:id="@+id/itemTextViewDate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Last * at DD/MM/YYYY"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/itemImageViewPicture"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDetailTextViewStars" />
+
+    <RatingBar
+        android:id="@+id/restaurantDetailRatingBarStars"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="5"
+        android:rating="3.7"
+        android:stepSize="0.1"
+        app:layout_constraintEnd_toEndOf="@+id/itemTextViewName"
+        app:layout_constraintStart_toStartOf="@+id/itemTextViewName"
+        app:layout_constraintTop_toBottomOf="@+id/itemTextViewName" />
+
+    <TextView
+        android:id="@+id/restaurantDetailTextViewStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3.7 stars"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/restaurantDetailRatingBarStars"
+        app:layout_constraintStart_toStartOf="@+id/restaurantDetailRatingBarStars"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDetailRatingBarStars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

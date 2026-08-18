@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".restaurant.RestaurantDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/restaurantDetailToolbarHeader"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#808080"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp">
+
+            <ImageView
+                android:id="@+id/restaurantDetailImageViewProfile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/restaurantDetailTextViewUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="username"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/restaurantDetailImageViewProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/restaurantDetailTextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="RESTAURANT"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RatingBar
+        android:id="@+id/restaurantDetailRatingBarStars"
+        style="@android:style/Widget.DeviceDefault.RatingBar"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:isIndicator="true"
+        android:max="5"
+        android:rating="3.7"
+        android:stepSize="0.1"
+        app:layout_constraintEnd_toEndOf="@+id/restaurantDetailTextViewName"
+        app:layout_constraintStart_toStartOf="@+id/restaurantDetailTextViewName"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDetailTextViewName" />
+
+    <TextView
+        android:id="@+id/restaurantDetailTextViewStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3.7 stars"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/restaurantDetailRatingBarStars"
+        app:layout_constraintStart_toStartOf="@+id/restaurantDetailRatingBarStars"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDetailRatingBarStars" />
+
+    <ImageView
+        android:id="@+id/restaurantDetailImageViewPicture"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDetailToolbarHeader"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/restaurantDetailTextViewName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Restaurant Name"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/restaurantDetailImageViewPicture"
+        app:layout_constraintStart_toStartOf="@+id/restaurantDetailImageViewPicture"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDetailImageViewPicture" />
+
+    <TextView
+        android:id="@+id/restaurantDetailTextViewAddress"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Location/Address"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/restaurantDetailTextViewStars"
+        app:layout_constraintStart_toStartOf="@+id/restaurantDetailTextViewStars"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDetailTextViewStars" />
+
+    <TextView
+        android:id="@+id/restaurantDetailTextViewDate"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Last visited at DD/MM/YYYY"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/restaurantDetailTextViewAddress"
+        app:layout_constraintStart_toStartOf="@+id/restaurantDetailTextViewAddress"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDetailTextViewAddress" />
+
+    <TextView
+        android:id="@+id/restaurantDetailTextViewDescription"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Restaurant Description"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/restaurantDetailTextViewDate"
+        app:layout_constraintStart_toStartOf="@+id/restaurantDetailTextViewDate"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDetailTextViewDate" />
+
+    <Button
+        android:id="@+id/restaurantDetailButtonFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="FOOD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDetailTextViewDescription" />
+
+    <Button
+        android:id="@+id/restaurantDetailButtonEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="EDIT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDetailTextViewDescription" />
+
+    <Button
+        android:id="@+id/restaurantDetailButtonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="BACK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDetailTextViewDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

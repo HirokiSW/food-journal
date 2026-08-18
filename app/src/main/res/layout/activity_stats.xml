@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.StatsActivity">
+
+    <TextView
+        android:id="@+id/statsTextViewLowestRatedRestaurant"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lowest rated restaurant"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/statsTextViewLowestRatedFood"
+        app:layout_constraintStart_toStartOf="@+id/statsTextViewIntro"
+        app:layout_constraintTop_toBottomOf="@+id/statsTextViewLowestRatedFood" />
+
+    <TextView
+        android:id="@+id/statsTextViewLowestRatedFood"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lowest rated food: "
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/statsTextViewHighestRatedRestaurant"
+        app:layout_constraintStart_toStartOf="@+id/statsTextViewIntro"
+        app:layout_constraintTop_toBottomOf="@+id/statsTextViewHighestRatedRestaurant" />
+
+    <TextView
+        android:id="@+id/statsTextViewHighestRatedRestaurant"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Highest rated restaurant: "
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/statsTextViewHighestRatedFood"
+        app:layout_constraintStart_toStartOf="@+id/statsTextViewIntro"
+        app:layout_constraintTop_toBottomOf="@+id/statsTextViewHighestRatedFood" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/statsToolbarHeader"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#808080"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp">
+
+            <ImageView
+                android:id="@+id/statsImageViewProfile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/statsTextViewUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="username"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/statsImageViewProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/statsTextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="USER STATS"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/statsTextViewIntro"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Your Food Journal Stats"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statsToolbarHeader" />
+
+    <TextView
+        android:id="@+id/statsTextViewRestaurantQuantity"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Number of restaurants visited: "
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/statsTextViewIntro"
+        app:layout_constraintStart_toStartOf="@+id/statsTextViewIntro"
+        app:layout_constraintTop_toBottomOf="@+id/statsTextViewIntro" />
+
+    <TextView
+        android:id="@+id/statsTextViewReviewQuantity"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Number of food reviewed: "
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/statsTextViewRestaurantQuantity"
+        app:layout_constraintStart_toStartOf="@+id/statsTextViewIntro"
+        app:layout_constraintTop_toBottomOf="@+id/statsTextViewRestaurantQuantity" />
+
+    <TextView
+        android:id="@+id/statsTextViewAverageRating"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Average rating given: "
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/statsTextViewReviewQuantity"
+        app:layout_constraintStart_toStartOf="@+id/statsTextViewIntro"
+        app:layout_constraintTop_toBottomOf="@+id/statsTextViewReviewQuantity" />
+
+    <TextView
+        android:id="@+id/statsTextViewExpensiveFood"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Most expensive food reviewed: "
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/statsTextViewAverageRating"
+        app:layout_constraintStart_toStartOf="@+id/statsTextViewIntro"
+        app:layout_constraintTop_toBottomOf="@+id/statsTextViewAverageRating" />
+
+    <TextView
+        android:id="@+id/statsTextViewHighestRatedFood"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Highest rated food: "
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/statsTextViewExpensiveFood"
+        app:layout_constraintStart_toStartOf="@+id/statsTextViewIntro"
+        app:layout_constraintTop_toBottomOf="@+id/statsTextViewExpensiveFood" />
+
+    <Button
+        android:id="@+id/statsButtonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="BACK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statsTextViewLowestRatedRestaurant" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

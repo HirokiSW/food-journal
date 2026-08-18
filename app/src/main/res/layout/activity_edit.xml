@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".authorization.EditActivity">
+
+    <TextView
+        android:id="@+id/editTextViewRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="EDIT"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editEditTextUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextViewRegister"
+        app:layout_constraintStart_toStartOf="@+id/editTextViewRegister"
+        app:layout_constraintTop_toBottomOf="@+id/editTextViewRegister" />
+
+    <TextView
+        android:id="@+id/editTextViewUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username:"
+        app:layout_constraintBottom_toTopOf="@+id/editEditTextUsername"
+        app:layout_constraintStart_toStartOf="@+id/editEditTextUsername" />
+
+    <EditText
+        android:id="@+id/editEditTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editEditTextUsername"
+        app:layout_constraintStart_toStartOf="@+id/editEditTextUsername"
+        app:layout_constraintTop_toBottomOf="@+id/editEditTextUsername" />
+
+    <TextView
+        android:id="@+id/editTextViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        app:layout_constraintBottom_toTopOf="@+id/editEditTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/editEditTextPassword" />
+
+    <EditText
+        android:id="@+id/editEditTextConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editEditTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/editEditTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editEditTextPassword" />
+
+    <TextView
+        android:id="@+id/editTextViewConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Password:"
+        app:layout_constraintBottom_toTopOf="@+id/editEditTextConfirm"
+        app:layout_constraintStart_toStartOf="@+id/editEditTextConfirm" />
+
+    <Button
+        android:id="@+id/editButtonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="SAVE"
+        app:layout_constraintEnd_toEndOf="@+id/editEditTextConfirm"
+        app:layout_constraintStart_toStartOf="@+id/editEditTextConfirm"
+        app:layout_constraintTop_toBottomOf="@+id/editEditTextConfirm" />
+
+    <Button
+        android:id="@+id/editButtonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="CANCEL"
+        app:layout_constraintEnd_toEndOf="@+id/editButtonSave"
+        app:layout_constraintStart_toStartOf="@+id/editButtonSave"
+        app:layout_constraintTop_toBottomOf="@+id/editButtonSave" />
+
+    <ImageView
+        android:id="@+id/editImageViewProfile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/editEditTextUsername"
+        app:layout_constraintEnd_toEndOf="@+id/editTextViewRegister"
+        app:layout_constraintStart_toStartOf="@+id/editTextViewRegister"
+        app:layout_constraintTop_toBottomOf="@+id/editTextViewRegister"
+        app:layout_constraintVertical_bias="0.19999999"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

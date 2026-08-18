@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".restaurant.AddRestaurantActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/addRestaurantToolbarHeader"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#808080"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp">
+
+            <ImageView
+                android:id="@+id/addRestaurantImageViewProfile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/addRestaurantTextViewUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="username"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/addRestaurantImageViewProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/addRestaurantTextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="ADD RESTAURANT"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/addRestaurantImageViewPicture"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRestaurantToolbarHeader"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/addRestaurantEditTextName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/addRestaurantImageViewPicture"
+        app:layout_constraintStart_toStartOf="@+id/addRestaurantImageViewPicture"
+        app:layout_constraintTop_toBottomOf="@+id/addRestaurantTextViewName" />
+
+    <EditText
+        android:id="@+id/addRestaurantEditTextAddress"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/addRestaurantEditTextName"
+        app:layout_constraintStart_toStartOf="@+id/addRestaurantEditTextName"
+        app:layout_constraintTop_toBottomOf="@+id/addRestaurantTextViewAddress" />
+
+    <EditText
+        android:id="@+id/addRestaurantEditTextDate"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Last Visited"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/addRestaurantEditTextAddress"
+        app:layout_constraintStart_toStartOf="@+id/addRestaurantEditTextAddress"
+        app:layout_constraintTop_toBottomOf="@+id/addRestaurantTextViewDate" />
+
+    <EditText
+        android:id="@+id/addRestaurantEditTextDescription"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/addRestaurantEditTextDate"
+        app:layout_constraintStart_toStartOf="@+id/addRestaurantEditTextDate"
+        app:layout_constraintTop_toBottomOf="@+id/addRestaurantTextViewDescription" />
+
+    <TextView
+        android:id="@+id/addRestaurantTextViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Restaurant Name:"
+        app:layout_constraintStart_toStartOf="@+id/addRestaurantEditTextName"
+        app:layout_constraintTop_toBottomOf="@+id/addRestaurantImageViewPicture" />
+
+    <TextView
+        android:id="@+id/addRestaurantTextViewAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Restaurant Address:"
+        app:layout_constraintStart_toStartOf="@+id/addRestaurantEditTextAddress"
+        app:layout_constraintTop_toBottomOf="@+id/addRestaurantEditTextName" />
+
+    <TextView
+        android:id="@+id/addRestaurantTextViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Last Visited Date:"
+        app:layout_constraintStart_toStartOf="@+id/addRestaurantEditTextDate"
+        app:layout_constraintTop_toBottomOf="@+id/addRestaurantEditTextAddress" />
+
+    <TextView
+        android:id="@+id/addRestaurantTextViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Review Description:"
+        app:layout_constraintStart_toStartOf="@+id/addRestaurantEditTextDescription"
+        app:layout_constraintTop_toBottomOf="@+id/addRestaurantEditTextDate" />
+
+    <Button
+        android:id="@+id/addRestaurantButtonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SAVE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRestaurantEditTextDescription" />
+
+    <Button
+        android:id="@+id/addRestaurantButtonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="CANCEL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRestaurantEditTextDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

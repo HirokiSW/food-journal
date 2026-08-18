@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".authorization.AdminActivity">
+
+    <TextView
+        android:id="@+id/adminTextViewUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="USERS"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/adminRecyclerViewUsers"
+        android:layout_width="360dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="@+id/adminTextViewUsers"
+        app:layout_constraintStart_toStartOf="@+id/adminTextViewUsers"
+        app:layout_constraintTop_toBottomOf="@+id/adminTextViewUsers" />
+
+    <Button
+        android:id="@+id/adminButtonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="ADD"
+        app:layout_constraintEnd_toEndOf="@+id/adminRecyclerViewUsers"
+        app:layout_constraintStart_toStartOf="@+id/adminRecyclerViewUsers"
+        app:layout_constraintTop_toBottomOf="@+id/adminRecyclerViewUsers" />
+
+    <Button
+        android:id="@+id/adminButtonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="CLEAR"
+        app:layout_constraintEnd_toEndOf="@+id/adminButtonAdd"
+        app:layout_constraintStart_toStartOf="@+id/adminButtonAdd"
+        app:layout_constraintTop_toBottomOf="@+id/adminButtonAdd" />
+
+    <Button
+        android:id="@+id/adminButtonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="BACK"
+        app:layout_constraintEnd_toEndOf="@+id/adminButtonClear"
+        app:layout_constraintStart_toStartOf="@+id/adminButtonClear"
+        app:layout_constraintTop_toBottomOf="@+id/adminButtonClear" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".review.EditFoodReviewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/editFoodToolbarHeader"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#808080"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp">
+
+            <ImageView
+                android:id="@+id/editFoodImageViewProfile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/editFoodTextViewUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="username"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editFoodImageViewProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/editFoodTextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="EDIT FOOD REVIEW"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/editFoodImageViewPicture"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFoodToolbarHeader"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/editFoodEditTextName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editFoodImageViewPicture"
+        app:layout_constraintStart_toStartOf="@+id/editFoodImageViewPicture"
+        app:layout_constraintTop_toBottomOf="@+id/editFoodTextViewName" />
+
+    <EditText
+        android:id="@+id/editFoodEditTextPrice"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Price"
+        android:inputType="number|numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editFoodEditTextName"
+        app:layout_constraintStart_toStartOf="@+id/editFoodEditTextName"
+        app:layout_constraintTop_toBottomOf="@+id/editFoodTextViewPrice" />
+
+    <EditText
+        android:id="@+id/editFoodEditTextDate"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Last Eaten"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editFoodEditTextPrice"
+        app:layout_constraintStart_toStartOf="@+id/editFoodEditTextPrice"
+        app:layout_constraintTop_toBottomOf="@+id/editFoodTextViewDate" />
+
+    <EditText
+        android:id="@+id/editFoodEditTextDescription"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editFoodEditTextDate"
+        app:layout_constraintStart_toStartOf="@+id/editFoodEditTextDate"
+        app:layout_constraintTop_toBottomOf="@+id/editFoodTextViewDescription" />
+
+    <TextView
+        android:id="@+id/editFoodTextViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Food Name:"
+        app:layout_constraintStart_toStartOf="@+id/editFoodEditTextName"
+        app:layout_constraintTop_toBottomOf="@+id/editFoodImageViewPicture" />
+
+    <TextView
+        android:id="@+id/editFoodTextViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Food Price:"
+        app:layout_constraintStart_toStartOf="@+id/editFoodEditTextPrice"
+        app:layout_constraintTop_toBottomOf="@+id/editFoodEditTextName" />
+
+    <TextView
+        android:id="@+id/editFoodTextViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Last Eaten Date:"
+        app:layout_constraintStart_toStartOf="@+id/editFoodEditTextDate"
+        app:layout_constraintTop_toBottomOf="@+id/editFoodEditTextPrice" />
+
+    <TextView
+        android:id="@+id/editFoodTextViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Review Description:"
+        app:layout_constraintStart_toStartOf="@+id/editFoodEditTextDescription"
+        app:layout_constraintTop_toBottomOf="@+id/editFoodEditTextDate" />
+
+    <Button
+        android:id="@+id/editFoodButtonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="SAVE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFoodRatingBarStars" />
+
+    <Button
+        android:id="@+id/editFoodButtonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="CANCEL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFoodRatingBarStars" />
+
+    <RatingBar
+        android:id="@+id/editFoodRatingBarStars"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/editFoodEditTextDescription"
+        app:layout_constraintStart_toStartOf="@+id/editFoodEditTextDescription"
+        app:layout_constraintTop_toBottomOf="@+id/editFoodTextViewStars" />
+
+    <TextView
+        android:id="@+id/editFoodTextViewStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Rating:"
+        app:layout_constraintStart_toStartOf="@+id/editFoodRatingBarStars"
+        app:layout_constraintTop_toBottomOf="@+id/editFoodEditTextDescription" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

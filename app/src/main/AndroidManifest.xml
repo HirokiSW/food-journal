@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FoodJournal" >
+        <activity
+            android:name=".review.EditFoodReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".review.AddFoodReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".review.FoodReviewDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".review.FoodReviewListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".restaurant.EditRestaurantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".restaurant.AddRestaurantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".restaurant.RestaurantDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".restaurant.RestaurantListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.StatsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".authorization.EditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".authorization.AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".authorization.RegisterActivity"
+            android:exported="false" />
+        <activity android:name=".ImageActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="@string/fileAuthority"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_path" />
+        </provider>
+
+        <activity
+            android:name=".authorization.MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

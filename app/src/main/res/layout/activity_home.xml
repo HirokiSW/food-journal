@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/homeToolbarHeader"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#808080"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp">
+
+            <ImageView
+                android:id="@+id/homeImageViewProfile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/homeTextViewUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="username"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/homeImageViewProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/homeTextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="FOOD JOURNAL"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/homeTextViewReviewed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="RECENTLY REVIEWED:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeRecyclerViewVisited" />
+
+    <TextView
+        android:id="@+id/homeTextViewVisited"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="RECENTLY VISITED:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeToolbarHeader" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeRecyclerViewVisited"
+        android:layout_width="350dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="@+id/homeTextViewVisited"
+        app:layout_constraintTop_toBottomOf="@+id/homeTextViewVisited" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeRecyclerViewReviewed"
+        android:layout_width="350dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="@+id/homeTextViewReviewed"
+        app:layout_constraintTop_toBottomOf="@+id/homeTextViewReviewed" />
+
+    <Button
+        android:id="@+id/homeButtonRestaurants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="ALL RESTAURANTS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeRecyclerViewReviewed" />
+
+    <Button
+        android:id="@+id/homeButtonRandomizer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="RANDOM FOOD"
+        app:layout_constraintEnd_toEndOf="@+id/homeButtonRestaurants"
+        app:layout_constraintStart_toStartOf="@+id/homeButtonRestaurants"
+        app:layout_constraintTop_toBottomOf="@+id/homeButtonRestaurants" />
+
+    <Button
+        android:id="@+id/homeButtonStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="MY STATS"
+        app:layout_constraintEnd_toEndOf="@+id/homeButtonRandomizer"
+        app:layout_constraintStart_toStartOf="@+id/homeButtonRandomizer"
+        app:layout_constraintTop_toBottomOf="@+id/homeButtonRandomizer" />
+</androidx.constraintlayout.widget.ConstraintLayout>

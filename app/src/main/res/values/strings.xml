@@ -1,0 +1,5 @@
+<resources>
+    <string name="fileAuthority">com.example.foodjournal</string>
+
+    <string name="app_name">FoodJournal</string>
+</resources>
